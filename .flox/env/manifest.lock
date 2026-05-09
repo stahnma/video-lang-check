@@ -12,6 +12,16 @@
       "ffmpeg": {
         "pkg-path": "ffmpeg"
       },
+      "glibc-static": {
+        "pkg-path": "glibc",
+        "systems": [
+          "x86_64-linux",
+          "aarch64-linux"
+        ],
+        "outputs": [
+          "static"
+        ]
+      },
       "gnumake": {
         "pkg-path": "gnumake"
       },
@@ -437,6 +447,82 @@
         "lib": "/nix/store/l1lbly9k00bia2fimr965jc3n21bmhj6-ffmpeg-8.0.1-lib",
         "man": "/nix/store/r8p823ijp53k797fgr6bwjnn36v3fv0r-ffmpeg-8.0.1-man",
         "out": "/nix/store/m4g5vxxl9qd47sdkl1bswq7l0ckkv3lc-ffmpeg-8.0.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "glibc",
+      "broken": false,
+      "derivation": "/nix/store/3qk44frb7zpwpy0lkxp3xl97zhpjrcr7-glibc-2.42-47.drv",
+      "description": "GNU C Library",
+      "install_id": "glibc-static",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "glibc-2.42-47",
+      "pname": "glibc",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:12:55.495865Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "2.42-47",
+      "outputs_to_install": [
+        "bin",
+        "bin",
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/hrzv5wvlrzffwnlc9fb9kr684cmaan4s-glibc-2.42-47-bin",
+        "debug": "/nix/store/cs19z2w7zbi0zal9xprjnsjphjj7f0ak-glibc-2.42-47-debug",
+        "dev": "/nix/store/5d312v017ffzy1w5bbgdb82hikmc88g3-glibc-2.42-47-dev",
+        "getent": "/nix/store/bh54z7ps4km7zfpw271s0pvv096piym1-glibc-2.42-47-getent",
+        "out": "/nix/store/z6pz4znvbr103fln95y5xg1syb864x1i-glibc-2.42-47",
+        "static": "/nix/store/4spp04khgcl9ql0vv26aza62kn77qglw-glibc-2.42-47-static"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "glibc",
+      "broken": false,
+      "derivation": "/nix/store/dg6z2jmzqiqzxp33cxbhawx9m51za491-glibc-2.42-47.drv",
+      "description": "GNU C Library",
+      "install_id": "glibc-static",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "glibc-2.42-47",
+      "pname": "glibc",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T06:23:24.678461Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "2.42-47",
+      "outputs_to_install": [
+        "bin",
+        "bin",
+        "bin",
+        "bin",
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/0bdqq2z98kg2hfn3k60if6pb5fd5p10h-glibc-2.42-47-bin",
+        "debug": "/nix/store/552mg3faarmwhwva0qqbcfdis2v0rn3r-glibc-2.42-47-debug",
+        "dev": "/nix/store/rwalsamz4246k8f1zzxa54qx7w3fbzdg-glibc-2.42-47-dev",
+        "getent": "/nix/store/l0bm29x6hcbj27940h2zh5f0xnxgx5k1-glibc-2.42-47-getent",
+        "out": "/nix/store/wb6rhpznjfczwlwx23zmdrrw74bayxw4-glibc-2.42-47",
+        "static": "/nix/store/fariy9l5p301rvlxdrwpx7d67vwraz2i-glibc-2.42-47-static"
       },
       "system": "x86_64-linux",
       "group": "toplevel",

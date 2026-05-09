@@ -55,16 +55,19 @@ whisper-static: whisper-source
 	@echo "void __omp_stub(void){}" | $(CC) -c -x c - -o $(STUB_LIB)/omp_stub.o
 	@ar rcs $(STUB_LIB)/libomp.a $(STUB_LIB)/omp_stub.o
 
-# Build a portable binary with whisper.cpp statically linked.
-# Only glibc remains dynamic so the binary runs on any x86_64 Linux.
+# Build a fully static binary with no runtime dependencies.
+# Safe for this tool since it does no DNS/NSS lookups.
+# Finds static glibc and libstdc++ from the nix store via the Flox env closure.
+GLIBC_STATIC_LIB := $(shell nix-store -qR $(FLOX_PREFIX) 2>/dev/null | grep 'glibc.*static' | head -1)/lib
+GCC_STATIC_LIB := $(shell nix-store -qR $(FLOX_PREFIX) 2>/dev/null | grep 'gcc-[0-9]' | grep -v lib | head -1)/lib
+
 static: fmt whisper-static deps
 	CGO_ENABLED=1 CC=$(CC) \
 	C_INCLUDE_PATH=$(WHISPER_SRC)/include:$(WHISPER_SRC)/ggml/include \
-	LIBRARY_PATH=$(STATIC_LIB):$(STATIC_GGML_LIB):$(STATIC_GGML_LIB)/ggml-cpu:$(STUB_LIB) \
-	go build -o $(BINARY) ./cmd/video-lang-check
-	patchelf --set-interpreter /lib64/ld-linux-x86-64.so.2 --remove-rpath $(BINARY)
+	LIBRARY_PATH=$(STATIC_LIB):$(STATIC_GGML_LIB):$(STATIC_GGML_LIB)/ggml-cpu:$(STUB_LIB):$(GLIBC_STATIC_LIB):$(GCC_STATIC_LIB) \
+	go build -ldflags '-extldflags "-static"' -o $(BINARY) ./cmd/video-lang-check
 	@echo ""
-	@echo "Static build complete. Verify with: ldd $(BINARY)"
+	@echo "Static build complete. Verify with: file $(BINARY)"
 
 # The Go bindings link -lggml-cpu but flox provides arch-specific variants.
 # Create a local symlink to satisfy the linker.
