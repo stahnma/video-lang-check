@@ -19,6 +19,7 @@ func extractAudio(inputPath string) (string, error) {
 
 	cmd := exec.Command("ffmpeg",
 		"-i", inputPath,
+		"-t", "30",
 		"-ar", "16000",
 		"-ac", "1",
 		"-f", "wav",
