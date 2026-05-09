@@ -26,7 +26,7 @@ import (
 	"runtime"
 	"unsafe"
 
-	"github.com/stahnma/speech-check/internal/audio"
+	"github.com/stahnma/video-lang-check/internal/audio"
 
 	whisper "github.com/ggerganov/whisper.cpp/bindings/go"
 )

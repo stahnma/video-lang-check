@@ -12,7 +12,7 @@ import (
 // Only the first 30 seconds are extracted, which is sufficient for language detection.
 // Returns the path to the temporary WAV file.
 func Extract(inputPath string) (string, error) {
-	tmpFile, err := os.CreateTemp("", "speech-check-*.wav")
+	tmpFile, err := os.CreateTemp("", "video-lang-check-*.wav")
 	if err != nil {
 		return "", fmt.Errorf("creating temp file: %w", err)
 	}

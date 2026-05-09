@@ -1,4 +1,4 @@
-speech-check
+/video-lang-check
 *.wav
 *.bin
 lib/

@@ -1,11 +1,11 @@
-# speech-check
+# video-lang-check
 
 A CLI tool that detects the spoken language in media files using [whisper.cpp](https://github.com/ggml-org/whisper.cpp).
 
 ## Usage
 
 ```
-speech-check [flags] <media-file>...
+video-lang-check [flags] <media-file>...
 ```
 
 ### Flags
@@ -20,20 +20,20 @@ speech-check [flags] <media-file>...
 
 ```bash
 # Basic usage
-speech-check -m ggml-base.bin video.mkv
+video-lang-check -m ggml-base.bin video.mkv
 # en 0.9346
 
 # Multiple files
-speech-check -m ggml-base.bin *.mkv
+video-lang-check -m ggml-base.bin *.mkv
 # video1.mkv	en 0.9346
 # video2.mkv	pt 0.8925
 
 # JSON output
-speech-check -m ggml-base.bin --json video.mkv
+video-lang-check -m ggml-base.bin --json video.mkv
 # {"confidence":0.9346,"file":"video.mkv","language":"en"}
 
 # JSONL logging
-speech-check -m ggml-base.bin --log results.jsonl *.mkv
+video-lang-check -m ggml-base.bin --log results.jsonl *.mkv
 ```
 
 ## Requirements

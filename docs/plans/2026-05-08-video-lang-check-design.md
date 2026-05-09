@@ -1,11 +1,11 @@
-# speech-check Design
+# video-lang-check Design
 
 A CLI tool that detects the spoken language in a media file.
 
 ## CLI Interface
 
 ```
-speech-check [flags] <media-file>
+video-lang-check [flags] <media-file>
 
 Flags:
   --model, -m    Path to whisper ggml model file (required)
@@ -46,7 +46,7 @@ JSONL log entry (via `--log`):
 ## Project Structure
 
 ```
-speech-check/
+video-lang-check/
 ├── main.go          # CLI entry point, flag parsing, orchestration
 ├── audio.go         # ffmpeg audio extraction to temp WAV
 ├── detect.go        # whisper model loading + language detection
@@ -82,7 +82,7 @@ speech-check/
 
 ## Error Handling
 
-- Missing ffmpeg: `"ffmpeg not found on PATH — install ffmpeg to use speech-check"`
+- Missing ffmpeg: `"ffmpeg not found on PATH — install ffmpeg to use video-lang-check"`
 - Bad input file: `"cannot open file: <path>"`
 - ffmpeg failure: `"failed to extract audio: <stderr output>"`
 - Model load failure: `"failed to load model: <path>"`

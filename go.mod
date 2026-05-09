@@ -1,4 +1,4 @@
-module github.com/stahnma/speech-check
+module github.com/stahnma/video-lang-check
 
 go 1.26.2
 
