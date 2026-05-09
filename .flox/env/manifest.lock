@@ -1,0 +1,837 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "schema-version": "1.11.0",
+    "install": {
+      "clang": {
+        "pkg-path": "clang"
+      },
+      "ffmpeg": {
+        "pkg-path": "ffmpeg"
+      },
+      "gnumake": {
+        "pkg-path": "gnumake"
+      },
+      "go": {
+        "pkg-path": "go"
+      },
+      "openmp": {
+        "pkg-path": "llvmPackages.openmp"
+      },
+      "whisper-cpp": {
+        "pkg-path": "whisper-cpp"
+      }
+    },
+    "hook": {},
+    "profile": {},
+    "options": {}
+  },
+  "packages": [
+    {
+      "attr_path": "clang",
+      "broken": false,
+      "derivation": "/nix/store/qhsgkrkmik9ny00sc06859r62x0sdbhx-clang-wrapper-21.1.8.drv",
+      "description": "C language family frontend for LLVM (wrapper script)",
+      "install_id": "clang",
+      "license": "[ NCSA, Apache-2.0, LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "clang-wrapper-21.1.8",
+      "pname": "clang",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T04:39:52.323167Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "21.1.8",
+      "outputs_to_install": [
+        "out",
+        "out",
+        "out",
+        "out",
+        "out",
+        "out",
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/z0dmrxbgqi98f7n8ljza91y5qazdyhcp-clang-wrapper-21.1.8"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "clang",
+      "broken": false,
+      "derivation": "/nix/store/wjips39p78ylb9y7z2chfxggg6id41ir-clang-wrapper-21.1.8.drv",
+      "description": "C language family frontend for LLVM (wrapper script)",
+      "install_id": "clang",
+      "license": "[ NCSA, Apache-2.0, LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "clang-wrapper-21.1.8",
+      "pname": "clang",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:12:54.067895Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "21.1.8",
+      "outputs_to_install": [
+        "out",
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/mv9708qsdkv1wn7r2l9naj0gashvgjr2-clang-wrapper-21.1.8"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "clang",
+      "broken": false,
+      "derivation": "/nix/store/yy7kjnh9wd75v29j2iwqyk6z3392if39-clang-wrapper-21.1.8.drv",
+      "description": "C language family frontend for LLVM (wrapper script)",
+      "install_id": "clang",
+      "license": "[ NCSA, Apache-2.0, LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "clang-wrapper-21.1.8",
+      "pname": "clang",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:45:37.342196Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "21.1.8",
+      "outputs_to_install": [
+        "out",
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/2g5sj60rd069ibv300i35yn5l4x967rm-clang-wrapper-21.1.8"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "clang",
+      "broken": false,
+      "derivation": "/nix/store/43hbdr07iwc5k62rr3x9vd8agak1j1cz-clang-wrapper-21.1.8.drv",
+      "description": "C language family frontend for LLVM (wrapper script)",
+      "install_id": "clang",
+      "license": "[ NCSA, Apache-2.0, LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "clang-wrapper-21.1.8",
+      "pname": "clang",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T06:23:23.138426Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "21.1.8",
+      "outputs_to_install": [
+        "out",
+        "out",
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/6n5r46icm0bl55s9p5z2zgcv93m39r5l-clang-wrapper-21.1.8"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ffmpeg",
+      "broken": false,
+      "derivation": "/nix/store/w23hdc40z8bjl3gah27mph8r40x2l653-ffmpeg-8.0.1.drv",
+      "description": "Complete, cross-platform solution to record, convert and stream audio and video",
+      "install_id": "ffmpeg",
+      "license": "[ LGPL-2.1-or-later, GPL-2.0-or-later, LGPL-3.0-or-later, GPL-3.0-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "ffmpeg-8.0.1",
+      "pname": "ffmpeg",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T04:39:52.873426Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "8.0.1",
+      "outputs_to_install": [
+        "bin",
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/is77kd6mpndwql7i1rvr3r180wrs3fy1-ffmpeg-8.0.1-bin",
+        "data": "/nix/store/2nh1l3dv2240832vrc5fz5jfxn8h7z0w-ffmpeg-8.0.1-data",
+        "dev": "/nix/store/ylh8cjjhz42l9yl4gr7flq2pg86csm0a-ffmpeg-8.0.1-dev",
+        "doc": "/nix/store/0dv3prd9nr80qpbnnd2qachwyldfyj19-ffmpeg-8.0.1-doc",
+        "lib": "/nix/store/nix29f8z75fmx0w74gzn84knr0cgn3dm-ffmpeg-8.0.1-lib",
+        "man": "/nix/store/5489ksvcsjcj44mv0rqfif7h844fjlri-ffmpeg-8.0.1-man",
+        "out": "/nix/store/qh6g8rf5p0drqc8djdxnx5w3irry1wv0-ffmpeg-8.0.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ffmpeg",
+      "broken": false,
+      "derivation": "/nix/store/l9ayfmvp534nsq2nml3089x52d1y375b-ffmpeg-8.0.1.drv",
+      "description": "Complete, cross-platform solution to record, convert and stream audio and video",
+      "install_id": "ffmpeg",
+      "license": "[ LGPL-2.1-or-later, GPL-2.0-or-later, LGPL-3.0-or-later, GPL-3.0-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "ffmpeg-8.0.1",
+      "pname": "ffmpeg",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:12:54.957411Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "8.0.1",
+      "outputs_to_install": [
+        "bin",
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/12l7ad9izf97zj3cjdfx9jrdy4vwwnk2-ffmpeg-8.0.1-bin",
+        "data": "/nix/store/1872hgn79dx143dm4swwnmlnh31pbqxd-ffmpeg-8.0.1-data",
+        "dev": "/nix/store/pqi4bcqpl3kz89r268nb3w9m7c3cga0s-ffmpeg-8.0.1-dev",
+        "doc": "/nix/store/a01ghqwrqjr60a7agw1d1mjm78p2nfcw-ffmpeg-8.0.1-doc",
+        "lib": "/nix/store/6c3f2aw2n4gi145s2v8qzwk2kv2j9fbg-ffmpeg-8.0.1-lib",
+        "man": "/nix/store/612gdj7p1qqxpxzzqx7165fpdwlvyhvz-ffmpeg-8.0.1-man",
+        "out": "/nix/store/3sqxs05k8445rd5lgcfg2qm74nrryq0m-ffmpeg-8.0.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ffmpeg",
+      "broken": false,
+      "derivation": "/nix/store/0ykw37zdmdlakip98dvbv821lrl8rxx7-ffmpeg-8.0.1.drv",
+      "description": "Complete, cross-platform solution to record, convert and stream audio and video",
+      "install_id": "ffmpeg",
+      "license": "[ LGPL-2.1-or-later, GPL-2.0-or-later, LGPL-3.0-or-later, GPL-3.0-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "ffmpeg-8.0.1",
+      "pname": "ffmpeg",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:45:37.896997Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "8.0.1",
+      "outputs_to_install": [
+        "bin",
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/iyfxhwjvp8yx0j5kyhabaw5b0598x3k2-ffmpeg-8.0.1-bin",
+        "data": "/nix/store/7phdqlxh0ih655a54z0b9blhq6bz9m0s-ffmpeg-8.0.1-data",
+        "dev": "/nix/store/vh9mh1b8l66jn8z2ggsh5mccfjvzmklw-ffmpeg-8.0.1-dev",
+        "doc": "/nix/store/5zpc1bsaj661986nhl0afwqjsrc1cbj6-ffmpeg-8.0.1-doc",
+        "lib": "/nix/store/wjyw9nacr97m952fs3fvqw0yyby53qa8-ffmpeg-8.0.1-lib",
+        "man": "/nix/store/dz8jhsffsghliwyaa4y7aw0wzlgkyy40-ffmpeg-8.0.1-man",
+        "out": "/nix/store/rwgw3qn2hj1vxsajzs6k2yffqfmrd6gf-ffmpeg-8.0.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ffmpeg",
+      "broken": false,
+      "derivation": "/nix/store/vih1gh1wnzwvn6bs5bbjwz1l75yk40gr-ffmpeg-8.0.1.drv",
+      "description": "Complete, cross-platform solution to record, convert and stream audio and video",
+      "install_id": "ffmpeg",
+      "license": "[ LGPL-2.1-or-later, GPL-2.0-or-later, LGPL-3.0-or-later, GPL-3.0-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "ffmpeg-8.0.1",
+      "pname": "ffmpeg",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T06:23:24.095949Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "8.0.1",
+      "outputs_to_install": [
+        "bin",
+        "bin",
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/68hyp7hfkyf6viq2yjkwv79f4dcg0bg0-ffmpeg-8.0.1-bin",
+        "data": "/nix/store/6mld0m3sl8lfxcavsbar7mh61yv4hd09-ffmpeg-8.0.1-data",
+        "dev": "/nix/store/7gizv7yj7bqc6gp2613qfgggjsfl9135-ffmpeg-8.0.1-dev",
+        "doc": "/nix/store/ip6n67n2zgpqbbm8d6l4axmsrfj4bmnv-ffmpeg-8.0.1-doc",
+        "lib": "/nix/store/l1lbly9k00bia2fimr965jc3n21bmhj6-ffmpeg-8.0.1-lib",
+        "man": "/nix/store/r8p823ijp53k797fgr6bwjnn36v3fv0r-ffmpeg-8.0.1-man",
+        "out": "/nix/store/m4g5vxxl9qd47sdkl1bswq7l0ckkv3lc-ffmpeg-8.0.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnumake",
+      "broken": false,
+      "derivation": "/nix/store/2x0iq3b0ldv411ld1i6a9ma8dh182h14-gnumake-4.4.1.drv",
+      "description": "Tool to control the generation of non-source files from sources",
+      "install_id": "gnumake",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "gnumake-4.4.1",
+      "pname": "gnumake",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T04:39:53.260522Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "4.4.1",
+      "outputs_to_install": [
+        "man",
+        "man",
+        "man",
+        "man",
+        "out",
+        "out",
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/8cnmyqhnlxpl7k9z15cridfdd9kka64b-gnumake-4.4.1-doc",
+        "info": "/nix/store/jar06k1k53zsig2iah8vaw1y9r0wxa55-gnumake-4.4.1-info",
+        "man": "/nix/store/2cd4idcvj4fnn4ss1ffz9fqagfhvjpy1-gnumake-4.4.1-man",
+        "out": "/nix/store/cz4rjcd28s9qqk2zcnn9d8pgs5l6qqy9-gnumake-4.4.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnumake",
+      "broken": false,
+      "derivation": "/nix/store/n3nk5kyi8ckasq265skqni13m34d2v20-gnumake-4.4.1.drv",
+      "description": "Tool to control the generation of non-source files from sources",
+      "install_id": "gnumake",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "gnumake-4.4.1",
+      "pname": "gnumake",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:12:55.991495Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "4.4.1",
+      "outputs_to_install": [
+        "man",
+        "man",
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/4wnafz38wr2jld58vr5j41b6mc4n26r6-gnumake-4.4.1-debug",
+        "doc": "/nix/store/15r3aanv0lh7mqi1gm3l8blpcnp05qzy-gnumake-4.4.1-doc",
+        "info": "/nix/store/gjd78rqz1k94n1c2s2kip126f8gjbb6g-gnumake-4.4.1-info",
+        "man": "/nix/store/i0rnnv9fm87c0228z34pgvk24ifqn6bm-gnumake-4.4.1-man",
+        "out": "/nix/store/z9wllcd2plhx8863ka0zfh0mffxm6jir-gnumake-4.4.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnumake",
+      "broken": false,
+      "derivation": "/nix/store/dhwc8f7yshq6m26lfn8sdsw9crnzfzkk-gnumake-4.4.1.drv",
+      "description": "Tool to control the generation of non-source files from sources",
+      "install_id": "gnumake",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "gnumake-4.4.1",
+      "pname": "gnumake",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:45:38.315617Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "4.4.1",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/2kpsfrqzyr0kzckkdjbqnsdcz2d719lk-gnumake-4.4.1-doc",
+        "info": "/nix/store/jlb9r2mzq8660lhn9my1pgri15jiqljq-gnumake-4.4.1-info",
+        "man": "/nix/store/x7p2q0wx9828p9n8r3pisbijncsfphvr-gnumake-4.4.1-man",
+        "out": "/nix/store/sqp22z2pm7s7n0wb3al4c3h47shw5aic-gnumake-4.4.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnumake",
+      "broken": false,
+      "derivation": "/nix/store/cy06y5fkvbiif016ab9icsj7vqyyiky1-gnumake-4.4.1.drv",
+      "description": "Tool to control the generation of non-source files from sources",
+      "install_id": "gnumake",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "gnumake-4.4.1",
+      "pname": "gnumake",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T06:23:25.239208Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "4.4.1",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/fa0f3msdrc5il96nn5qvrbhf6779vvh1-gnumake-4.4.1-debug",
+        "doc": "/nix/store/j2vz6gm38023yfg359cnawzvabqc0w9v-gnumake-4.4.1-doc",
+        "info": "/nix/store/2pqq9mdchp0s0cgl1qqql38v502kbdi1-gnumake-4.4.1-info",
+        "man": "/nix/store/an38a5jy0ivp1504yjbzgl4prvhjnix7-gnumake-4.4.1-man",
+        "out": "/nix/store/5lyy21zm97pj8l67r2xapdkxpxb6v6y0-gnumake-4.4.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "go",
+      "broken": false,
+      "derivation": "/nix/store/h19kjqi10ynjk0i6scllhv82gx45p58w-go-1.25.5.drv",
+      "description": "Go Programming language",
+      "install_id": "go",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "go-1.25.5",
+      "pname": "go",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T04:39:53.269291Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "1.25.5",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/wh88zz6r1ihcp2mm7ys1f2anp8aga6n2-go-1.25.5"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "go",
+      "broken": false,
+      "derivation": "/nix/store/32f3plvjz6apyxgi010l0c0ngqydzbyj-go-1.25.5.drv",
+      "description": "Go Programming language",
+      "install_id": "go",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "go-1.25.5",
+      "pname": "go",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:12:56.006200Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "1.25.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/k3knzdi0v21bf2m7vcxpdy1jnqg1h0zk-go-1.25.5"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "go",
+      "broken": false,
+      "derivation": "/nix/store/5m70w19x64mr74nzlmlmv2mia2k6mykd-go-1.25.5.drv",
+      "description": "Go Programming language",
+      "install_id": "go",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "go-1.25.5",
+      "pname": "go",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:45:38.324899Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "1.25.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/bwdahzajhqd5x14dbvkqww5f1wpsxif3-go-1.25.5"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "go",
+      "broken": false,
+      "derivation": "/nix/store/3xvlqyw28f7hk7qmk3f18pzi6c7ymzy8-go-1.25.5.drv",
+      "description": "Go Programming language",
+      "install_id": "go",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "go-1.25.5",
+      "pname": "go",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T06:23:25.254913Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "1.25.5",
+      "outputs_to_install": [
+        "out",
+        "out",
+        "out",
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/zzvsjgylnphvhms3lgr2qlwdxmc68z66-go-1.25.5"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.openmp",
+      "broken": false,
+      "derivation": "/nix/store/gqbvqi3wwc5f4gg1hzhy3426i729r9pr-openmp-21.1.8.drv",
+      "description": "Support for the OpenMP language",
+      "install_id": "openmp",
+      "license": "[ MIT, NCSA ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "openmp-21.1.8",
+      "pname": "openmp",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T04:40:10.967729Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "21.1.8",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/1348g3d2ib63s27fqy4ajhnjncbkm1gj-openmp-21.1.8-dev",
+        "out": "/nix/store/bzwgb7vwb9hr1hx537jnwc16ifvg046a-openmp-21.1.8"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.openmp",
+      "broken": false,
+      "derivation": "/nix/store/7qnqjqp9fa0jr763svg441ws0zs9adr6-openmp-21.1.8.drv",
+      "description": "Support for the OpenMP language",
+      "install_id": "openmp",
+      "license": "[ MIT, NCSA ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "openmp-21.1.8",
+      "pname": "openmp",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:13:24.096944Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "21.1.8",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/c9mp7fvs3ncas7hki25hzcgh48vmapm6-openmp-21.1.8-dev",
+        "out": "/nix/store/7x8hawq78w8v1g6vv0qvdqyra90capz1-openmp-21.1.8"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.openmp",
+      "broken": false,
+      "derivation": "/nix/store/b754p0f0j5c2argh3wa4l0n154zf3f9z-openmp-21.1.8.drv",
+      "description": "Support for the OpenMP language",
+      "install_id": "openmp",
+      "license": "[ MIT, NCSA ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "openmp-21.1.8",
+      "pname": "openmp",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:45:56.455960Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "21.1.8",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/lwli0jax5vf69lvp33rp28hz9xcyppik-openmp-21.1.8-dev",
+        "out": "/nix/store/mqp1whbixhffm7khic4n8hrng52bjmxw-openmp-21.1.8"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.openmp",
+      "broken": false,
+      "derivation": "/nix/store/0ibnzlhyxsj1vjx7sx68950lg0csrwzi-openmp-21.1.8.drv",
+      "description": "Support for the OpenMP language",
+      "install_id": "openmp",
+      "license": "[ MIT, NCSA ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "openmp-21.1.8",
+      "pname": "openmp",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T06:23:55.790762Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "21.1.8",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/wir3cgjjmg2qc2320p41mh11qisfpqyz-openmp-21.1.8-dev",
+        "out": "/nix/store/1vli081vrn8i64q8jq04xmfdq5kzvnfd-openmp-21.1.8"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "whisper-cpp",
+      "broken": false,
+      "derivation": "/nix/store/ym6rgkg22iz42s604pw26khan8mfb4yz-whisper-cpp-1.8.3.drv",
+      "description": "Port of OpenAI's Whisper model in C/C++",
+      "install_id": "whisper-cpp",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "whisper-cpp-1.8.3",
+      "pname": "whisper-cpp",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T04:42:37.549685Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "1.8.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/rc98z8cbbdsgj0yr4ckqvzbpg3gkwhfk-whisper-cpp-1.8.3"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "whisper-cpp",
+      "broken": false,
+      "derivation": "/nix/store/flrzy6ji0h0dkywbmjr85hzylx3h6pjf-whisper-cpp-1.8.3.drv",
+      "description": "Port of OpenAI's Whisper model in C/C++",
+      "install_id": "whisper-cpp",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "whisper-cpp-1.8.3",
+      "pname": "whisper-cpp",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:16:31.821455Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "1.8.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/657r44ahnly24k63pxglbiypn26zjxpv-whisper-cpp-1.8.3"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "whisper-cpp",
+      "broken": false,
+      "derivation": "/nix/store/8hzlmxl4k9xb03r7fngb7vkzpswl3f8i-whisper-cpp-1.8.3.drv",
+      "description": "Port of OpenAI's Whisper model in C/C++",
+      "install_id": "whisper-cpp",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "whisper-cpp-1.8.3",
+      "pname": "whisper-cpp",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:48:22.875280Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "1.8.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/cddmmyb7m3r21z9l6lb9vb0ifl3zwfby-whisper-cpp-1.8.3"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "whisper-cpp",
+      "broken": false,
+      "derivation": "/nix/store/mfkdaxzb2gcir2dw1kyr6882as5js0cm-whisper-cpp-1.8.3.drv",
+      "description": "Port of OpenAI's Whisper model in C/C++",
+      "install_id": "whisper-cpp",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "whisper-cpp-1.8.3",
+      "pname": "whisper-cpp",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T06:27:17.461971Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "1.8.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/335a8z5j3rhwqb1z6gcgd9kanyark1z0-whisper-cpp-1.8.3"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    }
+  ]
+}
