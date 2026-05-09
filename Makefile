@@ -7,7 +7,7 @@ INCLUDE_PATH := $(FLOX_PREFIX)/include
 LIB_PATH := $(FLOX_PREFIX)/lib
 LOCAL_LIB := $(CURDIR)/lib
 
-.PHONY: build clean deps fmt link-fixup test
+.PHONY: build clean deps fmt help link-fixup test
 
 build: fmt link-fixup deps
 	CGO_ENABLED=1 CC=$(CC) \
@@ -46,3 +46,15 @@ clean:
 
 deps:
 	go mod tidy
+
+help:
+	@echo "Usage: make [target]"
+	@echo ""
+	@echo "Targets:"
+	@echo "  build        Build the $(BINARY) binary (default)"
+	@echo "  test         Run tests"
+	@echo "  fmt          Format Go source files"
+	@echo "  clean        Remove build artifacts"
+	@echo "  deps         Tidy Go modules"
+	@echo "  link-fixup   Create libggml-cpu symlink for linker"
+	@echo "  help         Show this help message"
