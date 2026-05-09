@@ -1,0 +1,4 @@
+speech-check
+*.wav
+*.bin
+lib/
