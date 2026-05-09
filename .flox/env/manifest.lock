@@ -6,6 +6,9 @@
       "clang": {
         "pkg-path": "clang"
       },
+      "cmake": {
+        "pkg-path": "cmake"
+      },
       "ffmpeg": {
         "pkg-path": "ffmpeg"
       },
@@ -17,6 +20,9 @@
       },
       "openmp": {
         "pkg-path": "llvmPackages.openmp"
+      },
+      "patchelf": {
+        "pkg-path": "patchelf"
       },
       "whisper-cpp": {
         "pkg-path": "whisper-cpp"
@@ -156,6 +162,128 @@
       ],
       "outputs": {
         "out": "/nix/store/6n5r46icm0bl55s9p5z2zgcv93m39r5l-clang-wrapper-21.1.8"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cmake",
+      "broken": false,
+      "derivation": "/nix/store/f9gpwz1jslz4j7gk2byylr9qf91wyff6-cmake-4.1.2.drv",
+      "description": "Cross-platform, open-source build system generator",
+      "install_id": "cmake",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "cmake-4.1.2",
+      "pname": "cmake",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T04:39:52.346845Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "4.1.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/3m9pbzqgkm0zijfjjvksh8glz2r95dvi-cmake-4.1.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cmake",
+      "broken": false,
+      "derivation": "/nix/store/ffv4wmkgpjw78aymda5y7yy5cymz5bzw-cmake-4.1.2.drv",
+      "description": "Cross-platform, open-source build system generator",
+      "install_id": "cmake",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "cmake-4.1.2",
+      "pname": "cmake",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:12:54.102908Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "4.1.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/rwn5k9n9g9jymmi99mvl9l6gjnkpp59c-cmake-4.1.2-debug",
+        "out": "/nix/store/yyhldzqf3xfgh6jki1cz7i9f86d2d439-cmake-4.1.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cmake",
+      "broken": false,
+      "derivation": "/nix/store/ihq5n5qj0h62800m729n13bxdq96a6zg-cmake-4.1.2.drv",
+      "description": "Cross-platform, open-source build system generator",
+      "install_id": "cmake",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "cmake-4.1.2",
+      "pname": "cmake",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:45:37.367967Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "4.1.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/1cyc0yckxw16x6mma6jbcp70c7nv8i8i-cmake-4.1.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cmake",
+      "broken": false,
+      "derivation": "/nix/store/gjvzbi6wahm45dj4hdlcig6fg5dv5yhb-cmake-4.1.2.drv",
+      "description": "Cross-platform, open-source build system generator",
+      "install_id": "cmake",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "cmake-4.1.2",
+      "pname": "cmake",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T06:23:23.177340Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "4.1.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/4cwjkhihcm32020hj60xvz9rln7hrqgs-cmake-4.1.2-debug",
+        "out": "/nix/store/lxkvigfj5xy6w2bs7h4xwr3d7wb7piqb-cmake-4.1.2"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
@@ -708,6 +836,130 @@
       "outputs": {
         "dev": "/nix/store/wir3cgjjmg2qc2320p41mh11qisfpqyz-openmp-21.1.8-dev",
         "out": "/nix/store/1vli081vrn8i64q8jq04xmfdq5kzvnfd-openmp-21.1.8"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "patchelf",
+      "broken": false,
+      "derivation": "/nix/store/py5xdk9hyjwsxn572bx0g026z7hvsdgr-patchelf-0.15.2.drv",
+      "description": "Small utility to modify the dynamic linker and RPATH of ELF executables",
+      "install_id": "patchelf",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "patchelf-0.15.2",
+      "pname": "patchelf",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T04:40:22.033893Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "0.15.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/1kyv83yzw7xdw6rs34qvxba1h38mchpx-patchelf-0.15.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "patchelf",
+      "broken": false,
+      "derivation": "/nix/store/ghp2f749zwqg5hxnf8wnl7diplsz4sf8-patchelf-0.15.2.drv",
+      "description": "Small utility to modify the dynamic linker and RPATH of ELF executables",
+      "install_id": "patchelf",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "patchelf-0.15.2",
+      "pname": "patchelf",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:13:40.703635Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "0.15.2",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/y8zqyma7cklikqv6idi3f88323x52d5s-patchelf-0.15.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "patchelf",
+      "broken": false,
+      "derivation": "/nix/store/11cfqvjz6b0ipdasdv82amy7bdl5mj4h-patchelf-0.15.2.drv",
+      "description": "Small utility to modify the dynamic linker and RPATH of ELF executables",
+      "install_id": "patchelf",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "patchelf-0.15.2",
+      "pname": "patchelf",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T05:46:07.957022Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "0.15.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/hldimb63vb1xx9s19kk6nx4wnkf0gb72-patchelf-0.15.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "patchelf",
+      "broken": false,
+      "derivation": "/nix/store/yqz8a0v7a6xi8hmb30xh34ipnzkrm3nx-patchelf-0.15.2.drv",
+      "description": "Small utility to modify the dynamic linker and RPATH of ELF executables",
+      "install_id": "patchelf",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=0182a361324364ae3f436a63005877674cf45efb",
+      "name": "patchelf-0.15.2",
+      "pname": "patchelf",
+      "rev": "0182a361324364ae3f436a63005877674cf45efb",
+      "rev_count": 948083,
+      "rev_date": "2026-02-17T23:04:30Z",
+      "scrape_date": "2026-02-19T06:24:14.585539Z",
+      "stabilities": [
+        "unstable",
+        "staging"
+      ],
+      "unfree": false,
+      "version": "0.15.2",
+      "outputs_to_install": [
+        "out",
+        "out",
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/c2p7haf4zzkbrir9zs662r68c5dmylbq-patchelf-0.15.2"
       },
       "system": "x86_64-linux",
       "group": "toplevel",

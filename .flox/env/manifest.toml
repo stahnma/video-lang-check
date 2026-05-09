@@ -13,6 +13,8 @@ gnumake.pkg-path = "gnumake"
 whisper-cpp.pkg-path = "whisper-cpp"
 clang.pkg-path = "clang"
 openmp.pkg-path = "llvmPackages.openmp"
+cmake.pkg-path = "cmake"
+patchelf.pkg-path = "patchelf"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 
