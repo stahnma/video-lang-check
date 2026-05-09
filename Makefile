@@ -13,6 +13,7 @@ build: link-fixup deps
 	CGO_ENABLED=1 CC=$(CC) \
 	C_INCLUDE_PATH=$(INCLUDE_PATH) \
 	LIBRARY_PATH=$(LOCAL_LIB):$(LIB_PATH) \
+	CGO_LDFLAGS="-Wl,-rpath,$(LIB_PATH)" \
 	go build -o $(BINARY) .
 
 # The Go bindings link -lggml-cpu but flox provides arch-specific variants.
