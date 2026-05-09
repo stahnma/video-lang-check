@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"time"
 )
 
@@ -16,25 +17,18 @@ func main() {
 	logFile := flag.String("log", "", "path to JSONL log file (appends results)")
 
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage: speech-check [flags] <media-file>\n\nFlags:\n")
+		fmt.Fprintf(os.Stderr, "Usage: speech-check [flags] <media-file>...\n\nFlags:\n")
 		flag.PrintDefaults()
 	}
 	flag.Parse()
 
-	if flag.NArg() != 1 {
+	if flag.NArg() < 1 {
 		flag.Usage()
 		os.Exit(1)
 	}
 
-	inputFile := flag.Arg(0)
-
 	if *modelPath == "" {
 		fmt.Fprintln(os.Stderr, "error: --model is required")
-		os.Exit(1)
-	}
-
-	if _, err := os.Stat(inputFile); err != nil {
-		fmt.Fprintf(os.Stderr, "cannot open file: %s\n", inputFile)
 		os.Exit(1)
 	}
 
@@ -43,42 +37,78 @@ func main() {
 		os.Exit(1)
 	}
 
-	wavPath, err := extractAudio(inputFile)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to extract audio: %s\n", err)
-		os.Exit(1)
-	}
-	defer os.Remove(wavPath)
-
-	lang, confidence, err := detectLanguage(*modelPath, wavPath)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to detect language: %s\n", err)
-		os.Exit(1)
+	// Expand globs in arguments
+	var files []string
+	for _, arg := range flag.Args() {
+		matches, err := filepath.Glob(arg)
+		if err != nil || len(matches) == 0 {
+			files = append(files, arg)
+		} else {
+			files = append(files, matches...)
+		}
 	}
 
-	if *jsonOutput {
-		out, _ := json.Marshal(map[string]any{
-			"language":   lang,
-			"confidence": confidence,
-		})
-		fmt.Println(string(out))
-	} else {
-		fmt.Printf("%s %.4f\n", lang, confidence)
-	}
-
+	var logFd *os.File
 	if *logFile != "" {
-		entry, _ := json.Marshal(map[string]any{
-			"file":       inputFile,
-			"language":   lang,
-			"confidence": confidence,
-			"timestamp":  time.Now().UTC().Format(time.RFC3339),
-		})
-		f, err := os.OpenFile(*logFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+		var err error
+		logFd, err = os.OpenFile(*logFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "failed to write log: %s\n", err)
+			fmt.Fprintf(os.Stderr, "failed to open log file: %s\n", err)
 			os.Exit(1)
 		}
-		defer f.Close()
-		fmt.Fprintln(f, string(entry))
+		defer logFd.Close()
+	}
+
+	multiFile := len(files) > 1
+	hasError := false
+
+	for _, inputFile := range files {
+		if _, err := os.Stat(inputFile); err != nil {
+			fmt.Fprintf(os.Stderr, "cannot open file: %s\n", inputFile)
+			hasError = true
+			continue
+		}
+
+		wavPath, err := extractAudio(inputFile)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "failed to extract audio from %s: %s\n", inputFile, err)
+			hasError = true
+			continue
+		}
+
+		lang, confidence, err := detectLanguage(*modelPath, wavPath)
+		os.Remove(wavPath)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "failed to detect language for %s: %s\n", inputFile, err)
+			hasError = true
+			continue
+		}
+
+		if *jsonOutput {
+			out, _ := json.Marshal(map[string]any{
+				"file":       inputFile,
+				"language":   lang,
+				"confidence": confidence,
+			})
+			fmt.Println(string(out))
+		} else if multiFile {
+			fmt.Printf("%s\t%s %.4f\n", inputFile, lang, confidence)
+		} else {
+			fmt.Printf("%s %.4f\n", lang, confidence)
+		}
+
+		if logFd != nil {
+			entry, _ := json.Marshal(map[string]any{
+				"file":       inputFile,
+				"language":   lang,
+				"confidence": confidence,
+				"timestamp":  time.Now().UTC().Format(time.RFC3339),
+			})
+			fmt.Fprintln(logFd, string(entry))
+		}
+	}
+
+	if hasError {
+		os.Exit(1)
 	}
 }
