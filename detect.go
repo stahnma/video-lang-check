@@ -1,8 +1,30 @@
 package main
 
+/*
+#include <stdlib.h>
+#include <whisper.h>
+#include <ggml.h>
+
+// ggml_backend_load_all is in libggml but not in ggml.h
+extern void ggml_backend_load_all(void);
+
+static void whisper_log_noop(enum ggml_log_level level, const char * text, void * user_data) {
+	(void)level; (void)text; (void)user_data;
+}
+
+static struct whisper_context* init_no_gpu(const char* path) {
+	whisper_log_set(whisper_log_noop, NULL);
+	ggml_backend_load_all();
+	struct whisper_context_params params = whisper_context_default_params();
+	params.use_gpu = false;
+	return whisper_init_from_file_with_params(path, params);
+}
+*/
+import "C"
 import (
 	"fmt"
 	"runtime"
+	"unsafe"
 
 	whisper "github.com/ggerganov/whisper.cpp/bindings/go"
 )
@@ -10,10 +32,14 @@ import (
 // detectLanguage loads a whisper model and detects the spoken language in a WAV file.
 // Returns the language code, confidence score, and any error.
 func detectLanguage(modelPath, wavPath string) (string, float64, error) {
-	ctx := whisper.Whisper_init(modelPath)
-	if ctx == nil {
+	cPath := C.CString(modelPath)
+	defer C.free(unsafe.Pointer(cPath))
+
+	cCtx := C.init_no_gpu(cPath)
+	if cCtx == nil {
 		return "", 0, fmt.Errorf("failed to load model: %s", modelPath)
 	}
+	ctx := (*whisper.Context)(unsafe.Pointer(cCtx))
 	defer ctx.Whisper_free()
 
 	samples, err := readWAVSamples(wavPath)
