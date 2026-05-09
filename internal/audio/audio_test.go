@@ -27,13 +27,13 @@ func makeWAV(t *testing.T, samples []int16) string {
 
 	// fmt chunk
 	f.Write([]byte("fmt "))
-	binary.Write(f, binary.LittleEndian, uint32(16)) // chunk size
-	binary.Write(f, binary.LittleEndian, uint16(1))   // PCM format
-	binary.Write(f, binary.LittleEndian, uint16(1))   // mono
+	binary.Write(f, binary.LittleEndian, uint32(16))    // chunk size
+	binary.Write(f, binary.LittleEndian, uint16(1))     // PCM format
+	binary.Write(f, binary.LittleEndian, uint16(1))     // mono
 	binary.Write(f, binary.LittleEndian, uint32(16000)) // sample rate
 	binary.Write(f, binary.LittleEndian, uint32(32000)) // byte rate
-	binary.Write(f, binary.LittleEndian, uint16(2))   // block align
-	binary.Write(f, binary.LittleEndian, uint16(16))  // bits per sample
+	binary.Write(f, binary.LittleEndian, uint16(2))     // block align
+	binary.Write(f, binary.LittleEndian, uint16(16))    // bits per sample
 
 	// data chunk
 	f.Write([]byte("data"))

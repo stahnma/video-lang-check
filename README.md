@@ -5,7 +5,7 @@ A CLI tool that detects the spoken language in media files using [whisper.cpp](h
 ## Usage
 
 ```
-speech-check [flags] <media-file>
+speech-check [flags] <media-file>...
 ```
 
 ### Flags
@@ -23,14 +23,17 @@ speech-check [flags] <media-file>
 speech-check -m ggml-base.bin video.mkv
 # en 0.9346
 
+# Multiple files
+speech-check -m ggml-base.bin *.mkv
+# video1.mkv	en 0.9346
+# video2.mkv	pt 0.8925
+
 # JSON output
 speech-check -m ggml-base.bin --json video.mkv
-# {"confidence":0.9346,"language":"en"}
+# {"confidence":0.9346,"file":"video.mkv","language":"en"}
 
-# Batch with JSONL logging
-for f in *.mkv; do
-  speech-check -m ggml-base.bin --log results.jsonl "$f"
-done
+# JSONL logging
+speech-check -m ggml-base.bin --log results.jsonl *.mkv
 ```
 
 ## Requirements
@@ -54,11 +57,26 @@ Requires Go, a C compiler (clang), and the whisper.cpp libraries (available via 
 make build
 ```
 
+### Running tests
+
+```bash
+make test
+```
+
+### Makefile targets
+
+| Target | Description |
+|--------|-------------|
+| `build` | Format, fetch deps, and build the binary (default) |
+| `test` | Run all tests |
+| `fmt` | Format Go source files |
+| `clean` | Remove the binary and build artifacts |
+
 The build uses the whisper.cpp Go bindings with CGo. The Makefile handles linking against the flox-provided whisper.cpp libraries and embeds the library rpath in the binary.
 
 ## How it works
 
-1. Extracts audio from the input file using ffmpeg (16kHz mono WAV)
+1. Extracts the first 30 seconds of audio from the input file using ffmpeg (16kHz mono WAV)
 2. Loads the whisper model and computes the mel spectrogram
 3. Runs whisper's language auto-detection (no full transcription)
 4. Reports the detected language code and confidence score

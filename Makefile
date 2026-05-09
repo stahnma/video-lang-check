@@ -7,9 +7,9 @@ INCLUDE_PATH := $(FLOX_PREFIX)/include
 LIB_PATH := $(FLOX_PREFIX)/lib
 LOCAL_LIB := $(CURDIR)/lib
 
-.PHONY: build clean deps link-fixup test
+.PHONY: build clean deps fmt link-fixup test
 
-build: link-fixup deps
+build: fmt link-fixup deps
 	CGO_ENABLED=1 CC=$(CC) \
 	C_INCLUDE_PATH=$(INCLUDE_PATH) \
 	LIBRARY_PATH=$(LOCAL_LIB):$(LIB_PATH) \
@@ -36,6 +36,9 @@ link-fixup:
 			exit 1; \
 		fi \
 	fi
+
+fmt:
+	gofmt -w .
 
 clean:
 	rm -f $(BINARY)
