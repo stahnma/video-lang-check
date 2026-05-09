@@ -7,14 +7,20 @@ INCLUDE_PATH := $(FLOX_PREFIX)/include
 LIB_PATH := $(FLOX_PREFIX)/lib
 LOCAL_LIB := $(CURDIR)/lib
 
-.PHONY: build clean deps link-fixup
+.PHONY: build clean deps link-fixup test
 
 build: link-fixup deps
 	CGO_ENABLED=1 CC=$(CC) \
 	C_INCLUDE_PATH=$(INCLUDE_PATH) \
 	LIBRARY_PATH=$(LOCAL_LIB):$(LIB_PATH) \
 	CGO_LDFLAGS="-Wl,-rpath,$(LIB_PATH)" \
-	go build -o $(BINARY) .
+	go build -o $(BINARY) ./cmd/speech-check
+
+test: link-fixup deps
+	CGO_ENABLED=1 CC=$(CC) \
+	C_INCLUDE_PATH=$(INCLUDE_PATH) \
+	LIBRARY_PATH=$(LOCAL_LIB):$(LIB_PATH) \
+	go test ./...
 
 # The Go bindings link -lggml-cpu but flox provides arch-specific variants.
 # Create a local symlink to satisfy the linker.

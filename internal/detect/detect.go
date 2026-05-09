@@ -1,4 +1,4 @@
-package main
+package detect
 
 /*
 #include <stdlib.h>
@@ -26,12 +26,14 @@ import (
 	"runtime"
 	"unsafe"
 
+	"github.com/stahnma/speech-check/internal/audio"
+
 	whisper "github.com/ggerganov/whisper.cpp/bindings/go"
 )
 
-// detectLanguage loads a whisper model and detects the spoken language in a WAV file.
+// Language loads a whisper model and detects the spoken language in a WAV file.
 // Returns the language code, confidence score, and any error.
-func detectLanguage(modelPath, wavPath string) (string, float64, error) {
+func Language(modelPath, wavPath string) (string, float64, error) {
 	cPath := C.CString(modelPath)
 	defer C.free(unsafe.Pointer(cPath))
 
@@ -42,7 +44,7 @@ func detectLanguage(modelPath, wavPath string) (string, float64, error) {
 	ctx := (*whisper.Context)(unsafe.Pointer(cCtx))
 	defer ctx.Whisper_free()
 
-	samples, err := readWAVSamples(wavPath)
+	samples, err := audio.ReadWAVSamples(wavPath)
 	if err != nil {
 		return "", 0, fmt.Errorf("reading audio: %w", err)
 	}

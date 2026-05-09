@@ -1,4 +1,4 @@
-package main
+package audio
 
 import (
 	"encoding/binary"
@@ -8,9 +8,10 @@ import (
 	"os/exec"
 )
 
-// extractAudio shells out to ffmpeg to convert a media file to 16kHz mono WAV.
+// Extract shells out to ffmpeg to convert a media file to 16kHz mono WAV.
+// Only the first 30 seconds are extracted, which is sufficient for language detection.
 // Returns the path to the temporary WAV file.
-func extractAudio(inputPath string) (string, error) {
+func Extract(inputPath string) (string, error) {
 	tmpFile, err := os.CreateTemp("", "speech-check-*.wav")
 	if err != nil {
 		return "", fmt.Errorf("creating temp file: %w", err)
@@ -35,20 +36,18 @@ func extractAudio(inputPath string) (string, error) {
 	return tmpFile.Name(), nil
 }
 
-// readWAVSamples reads a 16kHz mono WAV file and returns float32 samples
+// ReadWAVSamples reads a 16kHz mono WAV file and returns float32 samples
 // normalized to [-1.0, 1.0].
-func readWAVSamples(path string) ([]float32, error) {
+func ReadWAVSamples(path string) ([]float32, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
 
-	// Skip the 44-byte WAV header
 	if len(data) < 44 {
 		return nil, fmt.Errorf("WAV file too short")
 	}
 
-	// Verify RIFF header
 	if string(data[0:4]) != "RIFF" || string(data[8:12]) != "WAVE" {
 		return nil, fmt.Errorf("not a valid WAV file")
 	}
@@ -68,7 +67,6 @@ func readWAVSamples(path string) ([]float32, error) {
 			return samples, nil
 		}
 		offset += 8 + chunkSize
-		// Chunks are word-aligned
 		if chunkSize%2 != 0 {
 			offset++
 		}
